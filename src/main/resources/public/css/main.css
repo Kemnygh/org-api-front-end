@@ -1,0 +1,30 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-con{
+    padding: 10px 10px 0px 10px;
+    margin: auto;
+    background: white;
+}
+
+.nav-footer {
+    display: flex;
+    list-style: none;
+    padding-bottom: 20px;
+}

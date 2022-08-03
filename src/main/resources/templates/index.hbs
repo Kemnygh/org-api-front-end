@@ -1,0 +1,218 @@
+{{#partial "content"}}
+    <table class="table table-sm table-responsive">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">API Name</th>
+                <th scope="col">Method</th>
+                <th scope="col">API endpoint</th>
+                <th scope="col">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Create Department</td>
+                <td class="text-warning">POST</td>
+                <td class="text-muted" style="font-size: 12px;">
+                    https://org-api-endpoint.herokuapp.com/departments/new
+                </td>
+                <td class="text-muted" style="font-size: 12px;">Provide details for:
+                    <ul class="text-muted" style="font-size: 12px;">
+                        <li>name - name of department</li>
+                        <li>description - what the department is</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Create User</td>
+                <td class="text-warning">POST</td>
+                <td class="text-muted" style="font-size: 12px;"> https://org-api-endpoint.herokuapp.com/user/new</td>
+                <td class="text-muted" style="font-size: 12px;">Provide details for:
+                    <ul class="text-muted" style="font-size: 12px;">
+                        <li>first_name - employee first name</li>
+                        <li>last_name - employee last name</li>
+                        <li>staff_id - employee ID</li>
+                        <li>user_position - employee role</li>
+                        <li>phone_no - telephone number</li>
+                        <li>email - employee email address</li>
+                        <li>photo - photo storage url</li>
+                        <li>department_id - Id of the department based on department info the employee belongs to</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Create General News</td>
+                <td class="text-warning">POST</td>
+                <td class="text-muted" style="font-size: 12px;">https://org-api-endpoint.herokuapp.com/news/general/new</td>
+                <td class="text-muted" style="font-size: 12px;">Provide details for:
+                    <ul class="text-muted" style="font-size: 12px;">
+                        <li>title - Post title</li>
+                        <li>content - Post content</li>
+                        <li>user_id - id of the employee based on users info</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>Create Departmental News</td>
+                <td class="text-warning">POST</td>
+                <td class="text-muted" style="font-size: 12px;"> https://org-api-endpoint.herokuapp.com/news/departmental/new</td>
+                <td class="text-muted" style="font-size: 12px;">Provide details for:
+                    <ul class="text-muted" style="font-size: 12px;">
+                        <li>title - Post title</li>
+                        <li>content - Post content</li>
+                        <li>user_id - id of the employee based on users info</li>
+                        <li>department_id - id of the department based on department info the employee belongs to</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>Departments</td>
+                <td class="text-success">GET</td>
+                <td>
+                    <ul class="text-muted" style="font-size: 12px;">
+                        <li>All departments - https://org-api-endpoint.herokuapp.com/departments</li>
+                        <li>Single department - https://org-api-endpoint.herokuapp.com/departments/1</li>
+                        <li class="text-danger" style="list-style:none">*note that the digit here represents the id for the department based on its creation</li>
+                    </ul>
+                </td>
+                <td class="text-muted" style="font-size: 12px;">Access all Departments/individual and their respective details
+                    <ul class="text-muted" style="font-size: 12px;">
+                        <li>department id</li>
+                        <li>name of department</li>
+                        <li>description</li>
+                        <li>created date (milliseconds)</li>
+                        <li>updated date (milliseconds)</li>
+                        <li>updated date (True or False)</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td>Department Employees</td>
+                <td class="text-success">GET</td>
+                <td class="text-muted" style="font-size: 12px;">
+                    https://org-api-endpoint.herokuapp.com/departments/1/users
+                    <br>
+                    <span class="text-danger">*note that the digit here represents the id for the department based on its creation</span>
+                </td>
+                <td class="text-muted" style="font-size: 12px;">Access all Employees of a given department with details:
+                    <ul class="text-muted" style="font-size: 12px;">
+                        <li>user id</li>
+                        <li>first name</li>
+                        <li>last name </li>
+                        <li>staff_id</li>
+                        <li>user position</li>
+                        <li>phone number</li>
+                        <li>email</li>
+                        <li>photo link</li>
+                        <li>department id</li>
+                        <li>created date (milliseconds)</li>
+                        <li>updated date (milliseconds)</li>
+                        <li>updated date (True or False)</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">7</th>
+                <td>Department Summary</td>
+                <td class="text-success">GET</td>
+                <td class="text-muted" style="font-size: 12px;">
+                    https://org-api-endpoint.herokuapp.com/departments/1/specific
+                    <br>
+                    <span class="text-danger">*note that the digit here represents the id for the department based on its creation</span>
+                </td>
+                <td class="text-muted" style="font-size: 12px;">Access a departments summary:
+                    <ul class="text-muted" style="font-size: 12px;">
+                        <li>Department name</li>
+                        <li>Description</li>
+                        <li>Number of employees</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">8</th>
+                <td>Department Detailed</td>
+                <td class="text-success">GET</td>
+                <td class="text-muted" style="font-size: 12px;">https://org-api-endpoint.herokuapp.com/departments/1/details
+                    <br><span class="text-danger">*note that the digit here represents the id for the department based on its creation</span></td>
+                <td class="text-muted" style="font-size: 12px;">Access a departments full details with all its relations:
+                    <ul class="text-muted" style="font-size: 12px;">
+                        <li>Department details object</li>
+                        <li>All Users details object</li>
+                        <li>All Post details object</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">9</th>
+                <td>Users</td>
+                <td class="text-success">GET</td>
+                <td class="text-muted" style="font-size: 12px;">
+                    <li>All Users -  https://org-api-endpoint.herokuapp.com/users</li>
+                    <li>Single User -  https://org-api-endpoint.herokuapp.com/users/1</li>
+                    <li class="text-danger" style="list-style:none">*note that the digit here represents the id for the user/employee based on its creation</li>
+                </td>
+                <td class="text-muted" style="font-size: 12px;">Access all users/Single and their respective details
+                    <ul class="text-muted" style="font-size: 12px;">
+                        <li>user id</li>
+                        <li>first name</li>
+                        <li>last name </li>
+                        <li>staff_id</li>
+                        <li>user position</li>
+                        <li>phone number</li>
+                        <li>email</li>
+                        <li>photo link</li>
+                        <li>department id</li>
+                        <li>created date (milliseconds)</li>
+                        <li>updated date (milliseconds)</li>
+                        <li>updated date (True or False)</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">10</th>
+                <td>News</td>
+                <td class="text-success">GET</td>
+                <td class="text-muted" style="font-size: 12px;">
+                    <li>General News -  https://org-api-endpoint.herokuapp.com/general/posts</li>
+                    <li>Departmental News -  https://org-api-endpoint.herokuapp.com/departmental/posts</li>
+                </td>
+                <td class="text-muted" style="font-size: 12px;">News articles for the respective sections and their respective details
+                    <ul class="text-muted" style="font-size: 12px;">
+                        <li>post id</li>
+                        <li>title</li>
+                        <li>content</li>
+                        <li>employee id</li>
+                        <li>department id (departmental)</li>
+                        <li>type</li>
+                        <li>created date (milliseconds)</li>
+                        <li>updated date (milliseconds)</li>
+                        <li>updated date (True or False)</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">11</th>
+                <td>Delete Items</td>
+                <td class="text-success">GET</td>
+                <td class="text-muted" style="font-size: 12px; height: 100px">
+                    <li>Delete User - https://org-api-endpoint.herokuapp.com/user/1/delete</li>
+                    <li>Delete General Post - https://org-api-endpoint.herokuapp.com/general/post/1/delete</li>
+                    <li>Delete Departmental Post - https://org-api-endpoint.herokuapp.com/department/post/1/delete</li>
+                    <li class="text-danger" style="list-style:none">*note that each respective digit here represents the id for the item in question based on its creation</li>
+                </td>
+                <td >Soft delete items
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div style="height: 120px;"></div>
+{{/partial}}
+
+{{> layout.hbs}}
